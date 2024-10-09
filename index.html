@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gradient-to-br from-[#2A1D1E] to-[#8C6660] text-[#F0DFC8] font-sans">
+    <div class="bg-[#3D2420]/70 rounded-2xl shadow-lg p-10 w-full max-w-md">
+        <h1 class="text-[#FFB399] text-center text-2xl mb-5">Todo List</h1>
+
+        <div class="flex mb-5">
+            <input id="taskInput" type="text" placeholder="What's on your mind?"
+                class="w-full px-3 py-2 rounded-lg bg-[#DBBEA1]/20 text-[#F0DFC8] border border-[#DBBEA1]/30 focus:outline-none focus:ring-2 focus:ring-[#DB7F67] focus:border-[#DB7F67] placeholder:italic placeholder-[#F0DFC8]/70 mr-4">
+            <button id="addButton" class="px-4 py-2 rounded-lg bg-[#FF6B8B] text-[#2A1D1E] font-bold hover:bg-[#FFB399] transition-colors">Add</button>
+        </div>
+
+        <h2 class="text-[#FFB399] text-center text-xl mb-5">My Tasks</h2>
+
+        <ul id="taskList" class="space-y-3">
+            <li class="bg-[#DBBEA1]/10 p-2 rounded-lg flex items-center hover:bg-[#DBBEA1]/20 transition-colors">
+                <input type="checkbox" onclick="updateCount()" class="mr-2 cursor-pointer"> Solve Leetcode
+                <button onclick="deleteTask(this)" class="ml-auto bg-[#FF6B8B] px-2 py-1 rounded text-[#2A1D1E] font-bold">Delete</button>
+            </li>
+            <li class="bg-[#DBBEA1]/10 p-2 rounded-lg flex items-center hover:bg-[#DBBEA1]/20 transition-colors">
+                <input type="checkbox" onclick="updateCount()" class="mr-2 cursor-pointer"> Prepare for interviews
+                <button onclick="deleteTask(this)" class="ml-auto bg-[#FF6B8B] px-2 py-1 rounded text-[#2A1D1E] font-bold">Delete</button>
+            </li>
+            <li class="bg-[#DBBEA1]/10 p-2 rounded-lg flex items-center hover:bg-[#DBBEA1]/20 transition-colors">
+                <input type="checkbox" onclick="updateCount()" class="mr-2 cursor-pointer"> Complete the project
+                <button onclick="deleteTask(this)" class="ml-auto bg-[#FF6B8B] px-2 py-1 rounded text-[#2A1D1E] font-bold">Delete</button>
+            </li>
+        </ul>
+
+        <b class="block mt-5 text-center text-sm">Completed tasks: <span id="completed" class="font-bold text-[#FFB399]">0</span> | Incomplete tasks: <span id="incomplete" class="font-bold text-[#FFB399]">0</span></b>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
